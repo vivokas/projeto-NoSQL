@@ -1,0 +1,70 @@
+### Aula 2 ###
+
+
+1 - Inserir no banco: Nome de 3 colegas, data de nascimento, disciplina cursada e curso. 
+
+> use ALunosPos
+switched to db ALunosPos
+
+> show dbs
+AlunosPos  0.000GB
+local      0.000GB
+
+> use AlunoPos
+switched to db AlunoPos
+ db.AlunosPos.insert({"nome": "Viviane Silva", "DataNasc":ISODate("1990-10-12"),"Discplina":"Banco Nao Relacional"}) 
+WriteResult({ "nInserted" : 1 })
+
+> db.AlunosPos.insert({"nome": "Jucelio Dos Santos", "DataNasc":ISODate("1985-12-25"),"Discplina":"Banco Nao Relacional"})
+WriteResult({ "nInserted" : 1 })
+
+> db.AlunosPos.insert({"nome": "Tiago Silva", "DataNasc":ISODate("1986-03-02"),"Discplina":"Banco Nao Relacional"})
+WriteResult({ "nInserted" : 1 })
+
+
+
+************************************
+2 - Procure no banco a pessoa com a menor data de nascimento.
+ 
+> db.AlunosPos.find().sort({DataNasc: -1})
+{ "_id" : ObjectId("5824f903fbea453335adc9c9"), "nome" : "Viviane Silva", "DataNasc" : ISODate("1990-10-12T00:00:00Z"), "Discplina" : "Banco Nao Relacional" }
+{ "_id" : ObjectId("5824f952fbea453335adc9cb"), "nome" : "Tiago Silva", "DataNasc" : ISODate("1986-03-02T00:00:00Z"), "Discplina" : "Banco Nao Relacional" }
+{ "_id" : ObjectId("5824f92cfbea453335adc9ca"), "nome" : "Jucelio Dos Santos", "DataNasc" : ISODate("1985-12-25T00:00:00Z"), "Discplina" : "Banco Nao Relacional" }
+
+
+> db.AlunosPos.find().sort({DataNasc: -1}).limit(1)
+{ "_id" : ObjectId("5824f903fbea453335adc9c9"), "nome" : "Viviane Silva", "DataNasc" : ISODate("1990-10-12T00:00:00Z"), "Discplina" : "Banco Nao Relacional" }
+
+************************************
+
+3 - Atualize sua nota na disciplina para 5. 
+
+> db.AlunosPos.update({"nome": "Viviane Silva"}, {$set:{"nota":5}})
+WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
+
+
+ db.AlunosPos.find()
+{ "_id" : ObjectId("5824f903fbea453335adc9c9"), "nome" : "Viviane Silva", "DataNasc" : ISODate("1990-10-12T00:00:00Z"), "Discplina" : "Banco Nao Relacional", "nota" : 5 }
+{ "_id" : ObjectId("5824f92cfbea453335adc9ca"), "nome" : "Jucelio Dos Santos", "DataNasc" : ISODate("1985-12-25T00:00:00Z"), "Discplina" : "Banco Nao Relacional" }
+{ "_id" : ObjectId("5824f952fbea453335adc9cb"), "nome" : "Tiago Silva", "DataNasc" : ISODate("1986-03-02T00:00:00Z"), "Discplina" : "Banco Nao Relacional" }
+> 
+
+*****************************************
+
+4 - Apague um dos seus colegas.
+
+
+> db.AlunosPos.remove({"nome":"Viviane Silva"})
+WriteResult({ "nRemoved" : 1 })
+
+
+> db.AlunosPos.find()
+{ "_id" : ObjectId("5824f92cfbea453335adc9ca"), "nome" : "Jucelio Dos Santos", "DataNasc" : ISODate("1985-12-25T00:00:00Z"), "Discplina" : "Banco Nao Relacional" }
+{ "_id" : ObjectId("5824f952fbea453335adc9cb"), "nome" : "Tiago Silva", "DataNasc" : ISODate("1986-03-02T00:00:00Z"), "Discplina" : "Banco Nao Relacional" }
+
+
+
+https://github.com/vivokas/NoSQL.git
+
+
+
