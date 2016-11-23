@@ -1,0 +1,37 @@
+Aula 4 - 22/11
+
+Faça uma pesquisa simples na coleção Vocabulary pelo termo “feliz” no campo
+text e diga:
+
+A) Número de documentos que foi escaneado
+db.Vocabulary.find({"text":"feliz"}).explain({"text":1})
+
+		"totalDocsExamined" : 291214,
+		
+
+
+B) Tempo que levou para fazer a consulta
+
+"executionTimeMillis" : 101,
+
+
+C) Crie um índice simples no campo text
+
+ db.Vocabulary.createIndex({"text":1})
+{
+	"createdCollectionAutomatically" : false,
+	"numIndexesBefore" : 1,
+	"numIndexesAfter" : 2,
+	"ok" : 1
+}
+
+
+D) Número de documentos que foi escaneado
+
+
+"totalDocsExamined" : 1,
+
+
+E) Tempo que levou para fazer a consulta
+
+"executionTimeMillis" : 18,
