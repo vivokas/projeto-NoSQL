@@ -6,10 +6,16 @@ Devido à alta escalabilidade, na certa seria escolher um banco de dados NOSQL, 
 
 
 
+
 Exercício 2
+
 
 Dentro de sua empresa certamente existem pontos que podem ser adaptados para a..Explique a infraestrutura atual e o que você mudaria para melhorar a eficiência. 
 
-
-No passado trabalhei em uma empresa que possui um software de gestão de saúde, então logo não mudaria a infraestrutura, falando melhor, do SGBD relacional para um não relacional, por se tratar de informações de pacientes, administração de medicação e etc. 
+Eu não possuo uma vivência ou convívio extenso com a infraestura da empresa referente a coleta e processamento de grande volume de dados.
+No passado trabalhei em uma empresa que possui um software de gestão de saúde, então logo não mudaria a infraestrutura, falando melhor, do SGBD relacional para um não relacional, por se tratar de informações de pacientes, administração de medicação, consultas, internações e etc. Não possui laboratório próprio para processamento de exames.
 No pouco contato e experiência que tive em relação à infraestrutura eu realizaria uma atualização do SGBD mais especificamente falando do SQL SERVER 2012 para 2014 ou até mesmo o 2016, devido às políticas de segurança que a Microsoft vem investindo nesse SGBD. O quesito de custo benefício é muito satisfatório se formos comparar com outras empresas. 
+
+
+
+
