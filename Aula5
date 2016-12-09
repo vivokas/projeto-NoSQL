@@ -1,0 +1,15 @@
+Exercício 1 
+
+Você e um grupo de amigos da faculdade decidem-se juntar e criar uma empresa de na área de IoT. Todos seus amigos são excelentes programadores porém estão em dúvida como montar a infraestrutura para suportar a grande quantidade de dados gerados pelos sensores da aplicação. O que vocês devem fazer?
+
+Devido à alta escalabilidade, na certa seria escolher um banco de dados NOSQL, como o MongoDB, utilizando uma plataforma pra processamento de grande volume de dados em cluster’s como o Hadoop e utilizando essa plataforma pode ser feito o armazenamento, processamento, a governança e manter a segurança dos dados em escala de petabyte, além de seu custo ser baixo. 
+
+
+
+Exercício 2
+
+Dentro de sua empresa certamente existem pontos que podem ser adaptados para a..Explique a infraestrutura atual e o que você mudaria para melhorar a eficiência. 
+
+
+No passado trabalhei em uma empresa que possui um software de gestão de saúde, então logo não mudaria a infraestrutura, falando melhor, do SGBD relacional para um não relacional, por se tratar de informações de pacientes, administração de medicação e etc. 
+No pouco contato e experiência que tive em relação à infraestrutura eu realizaria uma atualização do SGBD mais especificamente falando do SQL SERVER 2012 para 2014 ou até mesmo o 2016, devido às políticas de segurança que a Microsoft vem investindo nesse SGBD. O quesito de custo benefício é muito satisfatório se formos comparar com outras empresas. 
