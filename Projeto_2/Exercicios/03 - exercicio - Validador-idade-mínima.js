@@ -45,7 +45,7 @@ const nome = 'Ada'
 const idade = 0
 const porte = 'P'
 
-const idadeMinima = 2
+const idadeMinima = 2 
 
 const adocao = idade >= idadeMinima 
                 ? 'sim'
